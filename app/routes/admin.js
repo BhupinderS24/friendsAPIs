@@ -73,9 +73,9 @@ router.get('/admin/:id/users',(req,res)=>{
     .exec()
     .then(doc=>{
         console.log(doc.users);
-        res.status(200).json({
-            users: doc.users
-        })
+        res.status(200).json(
+        doc.users
+        )
     })
     .catch(err=>{
         console.log(err);
